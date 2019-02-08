@@ -1,0 +1,27 @@
+<view class="user-dashboard">
+  <view class="avatar-area">
+    <view class="content">
+      <!-- 未授权 -->
+      <i-avatar wx:if="{{ !userInfo || !userInfo.avatarUrl }}" size="large">微</i-avatar>
+      <view wx:if="{{ !userInfo || !userInfo.nickName }}" class="user-name font-14">
+        <i-button
+          open-type="getUserInfo"
+          type="primary"
+          size="small"
+          inline
+          bindgetuserinfo="handleGetUserInfo"
+        >使用微信头像</i-button>
+      </view>
+      <!-- 已授权 -->
+      <i-avatar wx:if="{{ userInfo && userInfo.avatarUrl }}" src="{{ userInfo.avatarUrl }}" size="large"></i-avatar>
+      <view wx:if="{{ userInfo && userInfo.nickName }}" class="user-name font-14">
+        {{ userInfo.nickName }}
+      </view>
+    </view>
+  </view>
+  <i-cell-group>
+    <i-cell is-link>
+      <button open-type="contact" class="share-button">联系开发者</button>
+    </i-cell>
+  </i-cell-group>
+</view>

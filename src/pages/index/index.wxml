@@ -1,0 +1,23 @@
+<view class="enter-container">
+  <view wx:if="{{ collectionList && collectionList.length }}" class="card-list">
+    <navigator
+      url="{{ '/pages/note-detail/index?id=' + item.objectId }}"
+      wx:for="{{ collectionList }}"
+      wx:key="{{ index }}"
+      class="list-item">
+      <view class="list-item-wrap">
+        <view class="list-avatar"><i-avatar i-class="{{ classNames[index % 4] }}" size="large">{{ item.locationName[0] }}</i-avatar></view>
+        <view class="list-name">
+          <view class="location-name ellipsis">{{ item.locationName }}</view>
+          <view class="desc ellipsis row">
+            <image class="icon" src="http://lc-I6nsXc99.cn-n1.lcfile.com/22fc395958f4744c1aeb.png?imageView2/2/q/40" />{{ item.address }}
+          </view>
+        </view>
+      </view>
+    </navigator>
+  </view>
+  <empty-area wx:else text="暂无收藏点，快去添加一个吧~" />
+  <view bindtap="goToCreate" class="add-button" hover-class="none">
+    <text class="iconfont add"></text>
+  </view>
+</view>

@@ -1,0 +1,15 @@
+{
+  "navigationBarTitleText": "收藏点详情",
+  "backgroundTextStyle": "dark",
+  "usingComponents": {
+    "i-tabs": "../../lib/iview/tabs/index",
+    "i-tab": "../../lib/iview/tab/index",
+    "i-swipeout": "../../lib/iview/swipeout/index",
+    "i-avatar": "../../lib/iview/avatar/index",
+    "i-icon": "../../lib/iview/icon/index",
+    "i-button": "../../lib/iview/button/index",
+    "i-action-sheet": "../../lib/iview/action-sheet/index",
+    "i-rate": "../../lib/iview/rate/index",
+    "i-toast": "../../lib/iview/toast/index"
+  }
+}

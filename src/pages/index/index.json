@@ -1,0 +1,11 @@
+{
+  "backgroundTextStyle": "dark",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "i-tabs": "../../lib/iview/tabs/index",
+    "i-tab": "../../lib/iview/tab/index",
+    "i-swipeout": "../../lib/iview/swipeout/index",
+    "i-avatar": "../../lib/iview/avatar/index",
+    "i-icon": "../../lib/iview/icon/index"
+  }
+}

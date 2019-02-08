@@ -1,0 +1,34 @@
+
+// 主题颜色
+$primary: #2d8cf0;
+$light-primary: #5cadff;
+$dark-primary: #2b85e4;
+
+$info: #2d8cf0;
+$success: #19be6b;
+$warning: #ff9900;
+$error: #ed3f14;
+
+$title: #1c2438;
+$content: #495060;
+$sub-color: #80848f;
+$disabled: #bbbec4;
+$border: #dddee1;
+$divider: #e9eaec;
+$background: #f8f8f9;
+
+.black { color: $title !important; }
+.orange { color:$warning !important; }
+.dark-gray { color: $content !important; }
+.gray { color: $sub-color !important; }
+.green { color: $success !important; }
+.red { color: $error !important; }
+.blue { color: $primary !important; }
+
+.black { color: $title !important; }
+.orange:before { color:$warning !important; }
+.dark-gray:before { color: $content !important; }
+.gray:before { color: $sub-color !important; }
+.green:before { color: $success !important; }
+.red:before { color: $error !important; }
+.blue:before { color: $primary !important; }

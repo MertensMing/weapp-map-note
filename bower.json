@@ -1,0 +1,23 @@
+{
+  "name": "usoccer",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "liuzhiming <liuzhiming@youzan.com>"
+  ],
+  "license": "ISC",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "date-fns": "^1.29.0",
+    "zanui-weapp": "^3.0.8",
+    "dateformat": "^0.4.1",
+    "underscore": "^1.9.1"
+  }
+}

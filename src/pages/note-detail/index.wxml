@@ -1,0 +1,61 @@
+<view wx:if="{{collection}}">
+  <view class="note-detail">
+    <view class="note-wrap">
+      <view class="content">
+        <view class="name">
+          {{ collection.locationName }}
+        </view>
+        <view wx:if="{{ collection.address }}" class="row font-12 gray">
+          <image class="icon" src="http://lc-I6nsXc99.cn-n1.lcfile.com/22fc395958f4744c1aeb.png?imageView2/2/h/40" />
+          <view>{{ collection.address }}</view>
+        </view>
+        <view wx:if="{{ collection.remark && collection.remark[0] }}" class="row font-12 gray">
+          <image class="icon" src="http://lc-I6nsXc99.cn-n1.lcfile.com/aa7d70979167fe146751.png?imageView2/2/h/40" />
+          <view>
+            <view wx:for="{{ collection.remark }}" wx:key="{{ index }}">{{ item }}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="footer">
+      <view class="right">
+        <view wx:if="{{ !like }}" bindtap="subscribe" class="item font-12">
+          <image class="icon" src="http://lc-I6nsXc99.cn-n1.lcfile.com/edd61dc35466b59373a8.png?imageView2/2/h/40" />收藏
+        </view>
+        <view wx:else bindtap="showActionSheet" class="item active font-12">
+          <image class="icon" src="http://lc-I6nsXc99.cn-n1.lcfile.com/7bbb1114ac1d7b833e08.png?imageView2/2/h/40" />已收藏
+        </view>
+        <view wx:if="{{ collection.phone }}" bindtap="handleCall" class="item active font-12">
+          <image class="icon" src="http://lc-I6nsXc99.cn-n1.lcfile.com/af2329a350b3a517137a.png?imageView2/2/h/40" />拨打电话
+        </view>
+        <view bindtap="showOptActionSheet" class="item active font-12">
+          <image class="icon" src="http://lc-I6nsXc99.cn-n1.lcfile.com/7a73703a37625d5dd751.png?imageView2/2/h/40" />操作
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="confirm-btn"><i-button bindtap="openLocation" type="ghost">打开地图</i-button></view>
+</view>
+<i-action-sheet
+  visible="{{ actionSheetShow }}"
+  actions="{{ actions }}"
+  show-cancel
+  bind:cancel="handleCancel"
+  bind:click="handleClickItem"
+>
+  <view slot="header" style="padding: 16px">
+    <view style="color: #444;font-size: 16px">确定吗？</view>
+    <text>取消收藏后收藏点将不会出现在你的收藏列表</text>
+  </view>
+</i-action-sheet>
+
+<i-action-sheet
+  visible="{{ optVisible }}"
+  actions="{{ isCreator ? optActions : optActions2 }}"
+  bind:click="handleOptCLick"
+  bind:cancel="handleOptCancel"
+  mask-closable
+  show-cancel
+/>
+
+<i-toast id="toast" />

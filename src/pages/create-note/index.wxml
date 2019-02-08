@@ -1,0 +1,48 @@
+<view class="create-note">
+  <i-cell-group>
+    <i-cell title="收藏点">
+      <i-icon slot="icon" type="barrage" size="20" />
+      <input
+        slot="footer"
+        data-name="locationName"
+        bindinput="handleFieldChange"
+        placeholder="输入收藏点名称"
+        value="{{ model.locationName }}"
+      />
+    </i-cell>
+    <i-cell title="位置">
+      <i-icon slot="icon" type="coordinates" size="20" />
+      <view slot="footer" bind:tap="handleChooseLocation">
+        <view class="address-area" wx:if="{{ model.address }}">
+          <view class="gray ellipsis">{{ model.address }}</view>
+        </view>
+        <view wx:else>请选择地图位置</view>
+      </view>
+    </i-cell>
+    <i-cell title="电话">
+      <i-icon slot="icon" type="mobilephone" size="20" />
+      <input
+        slot="footer"
+        data-name="phone"
+        bindinput="handleFieldChange"
+        placeholder="选填"
+        value="{{ model.phone }}"
+        type="number"
+      />
+    </i-cell>
+  </i-cell-group>
+  <i-panel title="备注">
+    <i-input
+      data-name="remark"
+      bindchange="handleRemarkChange"
+      type="textarea"
+      placeholder="请输入备注"
+      value="{{ model.remark }}"
+    />
+  </i-panel>
+  <view class="save-button">
+    <i-button type="primary" bindtap="handleConfirm" loading="{{ submiting }}">保存</i-button>
+  </view>
+</view>
+
+<i-toast id="toast" />

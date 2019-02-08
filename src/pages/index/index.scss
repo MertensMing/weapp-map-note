@@ -1,0 +1,120 @@
+@import "../../style/common.scss";
+
+.g-loading {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .g-loading-image {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.enter-container {
+  min-height: 100vh;
+  padding-bottom: 15px;
+  // padding-top: 42px;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  .info {
+    background-color: $info;
+  }
+
+  .success {
+    background-color: $success;
+  }
+
+  .warning {
+    background-color: $warning;
+  }
+
+  .error {
+    background-color: $error;
+  }
+
+  &__tabs {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+
+    &::after {
+      content: '';
+      display: block;
+      height: 42px;
+    }
+  }
+
+  .card-list {
+    overflow: hidden;
+    
+    .list-item {
+      margin: 15px;
+      background-color: #fff;
+      border-radius: 4px;
+      box-shadow: 0 3px 7px rgba(0,0,0,0.1);
+      color: $title;
+
+      .list-item-wrap {
+        padding: 10px;
+        overflow: hidden;
+        box-sizing: border-box;
+      }
+
+      .list-avatar {
+        float: left;
+      }
+  
+      .list-name {
+        float: left;
+        margin-left: -40px;
+        flex-grow: 2;
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 60px;
+
+        .location-name {
+          font-weight: bold;
+          font-size: 14px;
+        }
+
+        .desc {
+          margin-top: 6px;
+        }
+
+        .row {
+          color: $sub-color;
+          font-size: 12px;
+
+          .icon {
+            display: inline-block;
+            height: 16px;
+            width: 16px;
+            position: relative;
+            top: 3px;
+            margin-right: 3px;
+          }
+        }
+      }
+    }
+  }
+
+  .add-button {
+    background-color: $primary;
+    box-shadow: 0px 0 10px 0 $light-primary;
+    color: #fff;
+    position: fixed;
+    right: 15px;
+    bottom: 30px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    line-height: 50px;
+    text-align: center;
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,59 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.1.3",
+	"appid": "wx3a5bcc05aa879991",
+	"projectname": "%E5%9C%B0%E5%9B%BE%E6%94%B6%E8%97%8F%E5%A4%B9",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 2,
+			"list": [
+				{
+					"id": -1,
+					"name": "用户概览",
+					"pathName": "pages/user-dashboard/index",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "创建",
+					"pathName": "pages/create-note/index",
+					"query": "id=5b86b9000b6160006311a61a"
+				},
+				{
+					"id": 2,
+					"name": "详情",
+					"pathName": "pages/note-detail/index",
+					"query": "id=5c1b21b41579a3005fc256d2"
+				}
+			]
+		}
+	}
+}

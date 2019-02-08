@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "个人信息",
+  "backgroundTextStyle": "dark",
+  "usingComponents": {
+    "i-tabs": "../../lib/iview/tabs/index",
+    "i-tab": "../../lib/iview/tab/index",
+    "i-swipeout": "../../lib/iview/swipeout/index",
+    "i-avatar": "../../lib/iview/avatar/index",
+    "i-button": "../../lib/iview/button/index",
+    "i-cell-group": "../../lib/iview/cell-group/index",
+    "i-cell": "../../lib/iview/cell/index"
+  }
+}

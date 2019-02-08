@@ -1,0 +1,15 @@
+@import "./style/common.scss";
+
+page {
+  $bgColor: #f3f3f3;
+  background-color: $bgColor;
+}
+
+.button-area {
+  margin: 20px 30px;
+}
+
+[disabled],
+.placeholder {
+  color: #999;
+}

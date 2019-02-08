@@ -1,0 +1,72 @@
+@import "../../style/common.scss";
+
+.note-detail {
+  margin: 15px 10px;
+  box-shadow: 0 3px 7px rgba(0,0,0,0.1);
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+
+  .note-wrap {
+    display: flex;
+
+    .content {
+      flex-grow: 1;
+      width: 100%;
+      .name {
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 2;
+      }
+      .row {
+        line-height: 1.6;
+        font-size: 12px;
+        display: flex;
+        .icon {
+          margin-right: 6px;
+          width: 16px;
+          height: 16px;
+          min-width: 16px;
+          position: relative;
+          top: 1.5px;
+        }
+      }
+    }
+
+    .info {
+      background-color: $info;
+    }
+  }
+
+  .footer {
+    border-top: 1rpx solid $border;
+    margin-top: 9px;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 15px;
+
+    .right {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      color: #8c8c8c;
+
+      .icon {
+        width: 12px;
+        height: 12px;
+        margin-right: 2px;
+      }
+
+      .item {
+        margin-left: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &.active {
+          color: $title;
+        }
+      }
+    }
+  }
+}
